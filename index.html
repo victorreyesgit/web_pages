@@ -4,36 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Página Web</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input, textarea {
+            width: 80%;
+            max-width: 400px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-
-    <header>
-        <h1>Mi Página Web</h1>
-        <nav>
-            <ul>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="sobre-mi">
-            <h2>Sobre Mí</h2>
-            <p>Hola, soy un apasionado por la tecnología y la programación. Esta es mi primera página web creada con HTML, CSS y JavaScript.</p>
-        </section>
-
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <form id="formulario">
-                <input type="text" id="nombre" placeholder="Tu Nombre" required>
-                <input type="email" id="email" placeholder="Tu Email" required>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
+    <h1>¡Bienvenido a mi página web!</h1>
+    
+    <h2>Contacto</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="Tu nombre" required><br>
+        <input type="email" name="email" placeholder="Tu correo" required><br>
+        <textarea name="message" rows="4" placeholder="Tu mensaje" required></textarea><br>
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>
